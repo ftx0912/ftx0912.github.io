@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!-- 缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=1">
+    <meta http-equiv="Cache-Control" content="max-age=7200" />
+    <title>冯天祥_PHP工程师_简历</title>
+    <style type="text/css">
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+        #work,#jl{
+            width: 3rem;
+            height:2rem;
+            line-height:2rem;
+            border-top-left-radius: .5rem;
+            border-bottom-left-radius: .5rem;
+            color: #fff;
+            text-align: center;
+            cursor:pointer;
+            opacity: 0.7;
+        }
+        #work{
+            position: fixed;
+            bottom: 3rem;
+            right: 0;
+            background: #6281AF;
+        }
+        #jl{
+            position: fixed;
+            bottom: 5.5rem;
+            right: 0;
+            background: #EC6000;
+        }
+        img.phone{
+            display: block;width: 100%;height: 100%;border:0;margin:0 auto;
+        }
+        img.pc{
+            display: block;width: 75%;height: 100%;border:0;margin:0 auto;
+        }
+    </style>
+<script type="text/javascript">
+window.onload=function (){
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+                    "SymbianOS", "Windows Phone",
+                    "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+     
+    var flag = IsPC(); //true为PC端，false为手机端
+
+    if(flag){
+        var element = document.getElementById('top');
+        element.setAttribute("class","pc");
+    }
+
+};
+</script>
+</head>
+<body style="height:100%;">
+
+<div id="work"><a href='http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=ftx5410@163.com' target="_blank">邮件</a></div>
+<div id="jl"><a href='xiaotian/xiaotian.docx' download>简历</a></div>
+
+<img src="./xiaotian/xiaotian.png" id="top" class="phone" />
+</body>
+</html> 
